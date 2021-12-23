@@ -1,3 +1,6 @@
+https://github.com/dpnguyen53/bc20reactjs
+https://github.com/dpnguyen53/bc20_movie
+
 ====== Buổi 1 ======
 * Component:
     - Stateful Component: class
