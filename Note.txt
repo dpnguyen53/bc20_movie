@@ -1,0 +1,38 @@
+====== Buổi 1 ======
+* Component:
+    - Stateful Component: class
+    - Stateless Component: function
+* SPAs
+
+===== Buổi 2 ======
+* Install BS4
+* Rendering Elements: {}
+* Handling Events: onClick={}
+* State: Nếu như state thay đổi => component render lại 
+* List keys
+
+===== Buổi 3 ======
+* Communication
+    - Props: Truyền dữ liệu từ component cha => con
+    - Lifting State Up: Truyền dữ liệu từ component con => cha
+
+===== Buổi 4 ======
+* Shopping cart
+
+===== Buổi 5 ======
+* Usermanagement
+* Form
+
+===== Buổi 6 ======
+* Usermanagement
+* Redux
+
+===== Buổi 7 ======
+* Redux
+
+===== Buổi 8 ======
+* Form Validation
+* Lifecycle
+
+===== Buổi 9 ======
+* Routing
