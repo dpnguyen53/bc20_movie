@@ -38,4 +38,18 @@ https://github.com/dpnguyen53/bc20_movie
 * Lifecycle
 
 ===== Buổi 9 ======
-* Routing
+npm install react-router-dom --save
+* Routing (basic)
+    - Homepage
+    - About
+    - ListMovie
+
+===== Buổi 10 ======
+* Axios: fetch data
+
+
+
+
+* Redux thunk
+* Detail Movie
+* Get Params From URL

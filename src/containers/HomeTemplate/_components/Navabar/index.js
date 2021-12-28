@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default class NavbarHome extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         {/* Brand */}
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="#navbar">
           Navbar
         </a>
         {/* Toggler/collapsibe Button */}
@@ -22,19 +22,32 @@ export default class NavbarHome extends Component {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <NavLink
+                exact
+                activeClassName="active"
+                className="nav-link"
+                to="/"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to="/about"
+              >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/list-movie">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to="/list-movie"
+              >
                 ListMovie
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
