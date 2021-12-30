@@ -1,31 +1,11 @@
 import React, { Component } from "react";
 import Movie from "./Movie";
-import axios from "axios";
-import {
-  actListMovieRequest,
-  actListMovieSuccess,
-  actListMovieFailed,
-} from "./modules/action";
+import { actFetchListMovie } from "./modules/action";
 import { connect } from "react-redux";
 
 class ListMoviePage extends Component {
   componentDidMount() {
-    //request
-    this.props.listMovieRequest();
-
-    //call api
-    axios({
-      url: "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
-      method: "GET",
-    })
-      .then((result) => {
-        //success
-        this.props.listMovieSuccess(result.data);
-      })
-      .catch((err) => {
-        //failed
-        this.props.listMovieFailed(err);
-      });
+    this.props.fetchData();
   }
 
   renderListMovie = () => {
@@ -55,16 +35,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    listMovieRequest: () => {
-      dispatch(actListMovieRequest());
-    },
-
-    listMovieSuccess: (data) => {
-      dispatch(actListMovieSuccess(data));
-    },
-
-    listMovieFailed: (error) => {
-      dispatch(actListMovieFailed(error));
+    fetchData: () => {
+      dispatch(actFetchListMovie());
     },
   };
 };

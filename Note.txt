@@ -48,8 +48,7 @@ npm install react-router-dom --save
 * Axios: fetch data
 
 
-
-
-* Redux thunk
+===== Buổi 11 ======
+* Redux thunk <=> redux saga
 * Detail Movie
 * Get Params From URL
