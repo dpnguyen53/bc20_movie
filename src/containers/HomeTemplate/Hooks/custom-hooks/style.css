@@ -1,0 +1,11 @@
+.square {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  text-align: center;
+  line-height: 200px;
+}
+
+.circle {
+  border-radius: 50%;
+}

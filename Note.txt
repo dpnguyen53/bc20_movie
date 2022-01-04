@@ -52,3 +52,36 @@ npm install react-router-dom --save
 * Redux thunk <=> redux saga
 * Detail Movie
 * Get Params From URL
+
+======== Buổi 12 ======
+* HOC (Higher order component): 1 Component return về 1 component khác
+* Hooks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
