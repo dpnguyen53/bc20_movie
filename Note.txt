@@ -57,6 +57,11 @@ npm install react-router-dom --save
 * HOC (Higher order component): 1 Component return về 1 component khác
 * Hooks
 
+======== Buổi 13 ======
+* Routing (HomeTemplate & Admin Template)
+* Auth
+* Guard Routing Admin
+
 
 
 

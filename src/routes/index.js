@@ -5,6 +5,10 @@ import { Route } from "react-router-dom";
 import DetailMoviePage from "../containers/HomeTemplate/DetailMoviePage";
 import HocPage from "../containers/HomeTemplate/HocPage";
 import HooksPage from "../containers/HomeTemplate/Hooks";
+import Dashboard from "../containers/AdminTemplate/DashboardPage";
+import AddUserPage from "../containers/AdminTemplate/AddUserPage";
+import HomeTemplate from "../containers/HomeTemplate";
+import AdminTemplate from "../containers/AdminTemplate";
 
 const routesHome = [
   //home
@@ -42,12 +46,23 @@ const routesHome = [
   },
 ];
 
-// const routesAdmin = [];
+const routesAdmin = [
+  {
+    exact: false,
+    path: "/dashboard",
+    component: Dashboard,
+  },
+  {
+    exact: false,
+    path: "/add-user",
+    component: AddUserPage,
+  },
+];
 
 const renderRoutesHome = () => {
   return routesHome.map((route, index) => {
     return (
-      <Route
+      <HomeTemplate
         key={index}
         exact={route.exact}
         path={route.path}
@@ -57,4 +72,17 @@ const renderRoutesHome = () => {
   });
 };
 
-export { renderRoutesHome };
+const renderRoutesAdmin = () => {
+  return routesAdmin.map((route, index) => {
+    return (
+      <AdminTemplate
+        key={index}
+        exact={route.exact}
+        path={route.path}
+        component={route.component}
+      />
+    );
+  });
+};
+
+export { renderRoutesHome, renderRoutesAdmin };

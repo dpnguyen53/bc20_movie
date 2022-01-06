@@ -4,15 +4,15 @@ import "./App.css";
 // import ListMoviePage from "./containers/HomeTemplate/ListMoviePage";
 import PageNotFound from "./containers/PageNotFound";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import NavbarHome from "./containers/HomeTemplate/_components/Navabar";
-import { renderRoutesHome } from "./routes";
+import { renderRoutesHome, renderRoutesAdmin } from "./routes";
+import AuthPage from "./containers/AdminTemplate/AuthPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavbarHome />
       <Switch>
         {renderRoutesHome()}
+        {renderRoutesAdmin()}
         {/* Trang home - localhost:3000 */}
         {/* <Route exact path="/" component={HomePage} /> */}
 
@@ -21,6 +21,8 @@ function App() {
 
         {/* Trang list-movie - localhost:3000/list-movie */}
         {/* <Route path="/list-movie" component={ListMoviePage} /> */}
+
+        <Route path="/auth" component={AuthPage} />
 
         {/* Trang k tim thay */}
         <Route path="" component={PageNotFound} />
