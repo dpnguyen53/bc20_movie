@@ -60,7 +60,11 @@ npm install react-router-dom --save
 ======== Buổi 13 ======
 * Routing (HomeTemplate & Admin Template)
 * Auth
+
+======== Buổi 14 ======
 * Guard Routing Admin
+* Add User
+* Styled component
 
 
 
