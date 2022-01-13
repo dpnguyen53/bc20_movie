@@ -1,5 +1,5 @@
 import * as ActionType from "./constants";
-import axios from "axios";
+import api from "./../../../../utils/apiUtils";
 
 export const actFetchListMovie = () => {
   return (dispatch) => {
@@ -7,12 +7,10 @@ export const actFetchListMovie = () => {
     dispatch(actListMovieRequest());
 
     //call api
-    axios({
-      url: "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
-      method: "GET",
-    })
+    api
+      .get("QuanLyPhim/LayDanhSachPhim?maNhom=GP01")
       .then((result) => {
-        dispatch(actListMovieSuccess(result.data));
+        dispatch(actListMovieSuccess(result.data.content));
       })
       .catch((error) => {
         dispatch(actListMovieFailed(error));

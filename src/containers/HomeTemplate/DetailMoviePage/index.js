@@ -12,7 +12,7 @@ class DetailMoviePage extends Component {
 
   renderLichChieu = () => {
     const { data } = this.props;
-    return data?.lichChieu.map((item) => {
+    return data?.lichChieu?.map((item) => {
       return (
         <tr key={item.maLichChieu}>
           <td>{item.thongTinRap.tenCumRap}</td>

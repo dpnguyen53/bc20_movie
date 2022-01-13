@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Movie from "./Movie";
 import { actFetchListMovie } from "./modules/action";
 import { connect } from "react-redux";
-import Loading from "../../../components/Loading";
+import Loading from "components/Loading";
 
 class ListMoviePage extends Component {
   componentDidMount() {

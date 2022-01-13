@@ -27,7 +27,9 @@ function AuthPage(props) {
 
   const noti = () => {
     return (
-      error && <div className="alert alert-danger">{error.response.data}</div>
+      error && (
+        <div className="alert alert-danger">{error.response.data.content}</div>
+      )
     );
   };
 

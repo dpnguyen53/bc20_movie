@@ -1,3 +1,4 @@
+import React, { Suspense } from "react";
 import "./App.css";
 // import HomePage from "./containers/HomeTemplate/HomePage";
 // import AboutPage from "./containers/HomeTemplate/AboutPage";
@@ -9,25 +10,27 @@ import AuthPage from "./containers/AdminTemplate/AuthPage";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        {renderRoutesHome()}
-        {renderRoutesAdmin()}
-        {/* Trang home - localhost:3000 */}
-        {/* <Route exact path="/" component={HomePage} /> */}
+    <Suspense fallback={<div>Loading...</div>}>
+      <BrowserRouter>
+        <Switch>
+          {renderRoutesHome()}
+          {renderRoutesAdmin()}
+          {/* Trang home - localhost:3000 */}
+          {/* <Route exact path="/" component={HomePage} /> */}
 
-        {/* Trang about - localhost:3000/about */}
-        {/* <Route path="/about" component={AboutPage} /> */}
+          {/* Trang about - localhost:3000/about */}
+          {/* <Route path="/about" component={AboutPage} /> */}
 
-        {/* Trang list-movie - localhost:3000/list-movie */}
-        {/* <Route path="/list-movie" component={ListMoviePage} /> */}
+          {/* Trang list-movie - localhost:3000/list-movie */}
+          {/* <Route path="/list-movie" component={ListMoviePage} /> */}
 
-        <Route path="/auth" component={AuthPage} />
+          <Route path="/auth" component={AuthPage} />
 
-        {/* Trang k tim thay */}
-        <Route path="" component={PageNotFound} />
-      </Switch>
-    </BrowserRouter>
+          {/* Trang k tim thay */}
+          <Route path="" component={PageNotFound} />
+        </Switch>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 

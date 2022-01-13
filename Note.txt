@@ -66,6 +66,17 @@ npm install react-router-dom --save
 * Add User
 * Styled component
 
+======== Buổi 15 ======
+* Material UI
+* scss
+* alias
+* Lazy load page
+* Refactor service
+* Build
+    - Hosting (Server)
+    - Domain (abc.com)
+* Deploy app heroku
+
 
 
 
